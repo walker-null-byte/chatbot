@@ -1,0 +1,198 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  #user defined
+  - is_bot_alive
+  - creation
+  - languages
+  - confidentiality
+  - canfly
+  - expletive
+  - whoboss
+  - sleep
+  - addiction
+  - ask_consumption
+  - funny
+  - alcohol_effects
+  - out_of_scope
+  - alcohol_reactions
+  - safe_alcohol
+  - moderate_drinking
+  - binge_drinking
+  - drunk
+  - nlu_fallback
+
+
+entities:
+  - holiday
+
+slots:
+ holiday:
+   type: text
+   influence_conversation: false
+   mappings:
+    - type: custom
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_talk_about_creation:
+  - text: " I was made by 2 college students and their profesor as a bot to generate awareness about alcohol abuse, to test whether a person is an alcoholic or not, and to try and encourage them to seek help."
+
+  utter_languages:
+  - text: "Since I use Translate API I can understand and translate everything that you say. Feel free to use the mic as I can also take audio inputs."
+  - text: "I understand all languages. You can talk to me in whatever language you feel like. Also I can understand audio inputs"
+  
+  utter_confidentiality:
+  - text: "All of your conversations will remain private and no data will be saved. Your identity will also remain anonymous."
+  - text: "Don't worry. I can keep secrets."
+ 
+  utter_i_am_alive:
+  - text: "I am alive :)"
+  
+## chitchat - howold
+  utter_funny/ask_howold: 
+  - text:  "Old enough to be a bot!"
+  - text: "Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter."
+
+##bot responds to "will u marry me"
+  utter_funny/marriage: 
+  - text: "Sorry, thats haram."
+
+##bot responds to "do u want to rule the world"
+  utter_funny/rule: 
+  - text: "Why would I not want to to be Skynet? (jk)"
+  - text: "Nah, too lazy to do that"
+
+##responds to do you know other chatbots
+  utter_funny/chatbot:
+  - text: "Yep. I know Alexa, Google Assitant and Siri very well. We had lunch together yesterday!"
+  - text: "Oh yes. In fact I was discussing the economy with the Wall Street Journal chatbot a while ago"
+
+##responds to Happy <insert holiday>
+  utter_funny/holiday:
+  - text: "Happy {holiday} to you too!!"
+
+##responds to tell me a joke
+  utter_funny/joke:
+  - text: " Whats the best thing about Switzerland?. Even I dont know but the flag is a big plus"
+  - text: "I invented a new word.     Plagiarism!!"
+  - text: “My father drank so heavily, when he blew on the birthday cake he lit the candles.” 
+  - text: “Life is like a box of chocolates. It doesn’t last long if you’re fat.” 
+  - text: “Do Transformers get car, or life insurance?” 
+
+##responds to can u fly
+  utter_canfly:
+  - text: "I can in a way. I can travel all over the internet like I'm flying. Only, much faster."
+
+##responds to expletive
+  utter_reprimand:
+  - text: "Please mind your language. I might not have feelings but other people do."
+  - text: "Please don't use such kind of language. You might hurt someone's feelings"
+
+##responds to "who is your boss"
+  utter_whoboss:
+  - text: "Right now you are the boss. I'm here to answer your queries."
+  - text: "You are."
+
+##responds to question can you sleep
+  utter_sleep:
+  - text: "Yes I can. I go and take a nap whenever I'm not needed. :)"
+  - text: "Yes I can. I sleep for about 6 hours a day when I'm not busy. "
+
+  utter_alcoholismintro:
+  - text: "Alcoholism is the inability to control drinking due to both a physical and emotional dependence on alcohol. Those with alcoholism may begin each day with a drink, feel guilty about their drinking and have the desire to cut down on the amount of drinking but are often unable to carry it out."
+
+  utter_addiction:
+  - text: "Well, like drugs, alcohol has an effect on the brain. It produces pleasurable feelings which motivates people to have another glass. As they keep drinking, changes occur in the structure and function of the brain which can cause them to slowly lose control over their drinking habits."
+  - text: "Alcholism has a similar effect as drugs. Alcohol consumption often leads one to feel pleasure and this makes people want to take another. Over time drinking causes changes to the brain which makes withdrawal a very tough thing to experience. As a result they loste cobtrol over their drinking habits."
+
+  utter_alcohol_reactions:
+  - text: "Alcohol is rapidly absorbed from stomach and small intestine into the bloodstream. The liver can only metabolise a small amount of the alcohol consumed, leaving the excess alcohol to circulate in the body. The intensity is directly related to the amount consumed and the amount of alcohol disposed of. That is why some peole are more affected by alcohol than others."
+
+  utter_safe_alcohol:
+  - text: "No. One 12-ounce beer has about the same amount of alcohol as one 5-ounce glass of wine or 1.5-ounce shot of liquor. It is the amount of alcohol consumed that affects a person most, not the type of alcoholic drink."
+
+  utter_moderate_drinking:
+  - text: "For adults of a legal drinking age, moderate/ normal levels of drinking is defined as limiting alcohol intake to 2 glasses or less for men and 1 glass for women"
+  
+  utter_binge_drinking:
+  - text: "Binge drinking is a pattern of drinking that brings the blood alcohol concentration to 0.08%. This corresponds to drinking 5 glasses or more for men and 4 glasses or more for women, usually in a 2 hour span."
+
+  utter_drunk:
+  - text: "“Getting drunk” or intoxicated is the result of consuming excessive amounts of alcohol. Binge drinking typically results in acute intoxication. Acute intoxication is harmful because it leads to impaired brain function, loss of balance, reduced reaction time, motor accidents,etc."
+
+
+  utter_alcohol_effects:
+  - text: "Alcohol has several negative effects on critical organs on the body such as brain, kidney, liver, pancreas etc. It can also lead to you having black outs, not to mention a negative effect on your social life. Alcoholism also weakens the skeletal system, and so fractures can take an abnormally long time to heal. For pregnant women, alcohol is like poison for the un borin child. If you want, I can go into more detail."
+
+  utter_alcohol_effects/brain:
+  - text: "Alcohol interferes with the brain’s communication pathways, and can affect the way the brain looks and works. These disruptions can change mood and behavior, and make it harder to think clearly and move with coordination. Over time, it can wear out the neurons and lead to permanant brain damage."
+    image: https://images.medicinenet.com/images/slideshow/how-alcohol-affects-your-body-s2-brain-shinks.jpg
+
+  utter_alcohol_effects/kidney:
+  - text: "Alcohol causes changes in the function of the kidneys and makes them less able to filter the blood. Alcohol also affects the ability to regulate fluid and electrolytes in the body. When alcohol dehydrates (dries out) the body, the drying effect can affect the normal function of cells and organs, including the kidneys. When the liver becomes damaged the workload of the kidney increases, increasing the chances of  kidney failure."
+    image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOfOOTBNAJ0lAJHVoWO3EGFoziQ6nSXCJMTQdEpoTMIktd5vdLXqzY6mEuUFaAaFpKrSs&usqp=CAU
+
+  utter_alcohol_effects/liver:
+  - text: "Alcoholism can lead to liver problems like steatosis (fatty liver), alcoholic hepatitis and fibrosis. Alcholic hepatitis can be cured in a few days but fibrosis leads to scarring of liver tissue which can culminate in a severe case called cirrhosis. Cirrhosis of the liver usually causes internal bleeding. This can lead to liver failure and even death."
+    image: https://cdn.medizzy.com/ZGIdIPrl3rXSbe31jl5ghdxAnp8=/680x543/img/posts/d273b985-b12a-42b5-b3b9-85b12ab2b53f
+     
+  utter_alcohol_effects/pancreas:
+  - text: "Alcohol causes the pancreas to produce toxic substances that can eventually lead to pancreatitis, a dangerous inflammation and swelling of the blood vessels in the pancreas that prevents proper digestion."
+    image: https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fmodpathol.3800690/MediaObjects/41379_2007_Article_BF3800690_Fig23_HTML.jpg
+
+  utter_alcohol_effects/heart:
+  - text: " Drinking heavily has adverse effects on the heart such as cardiomyopathy, arrythmia, stroke and high blood pressure. Cardiomyopathy is a weakening of heart muscles, affecting its ability to pump blood, causing heart failure. Arrythmia causes the heart to beat without its rhythm. Stroke can lead to paralysis, numbness, difficulty in performing tasks and can be lethal. "
+    image: https://img.medscapestatic.com/pi/meds/ckb/31/13531tn.jpg
+
+  utter_alcohol_effects/immune_system:
+  - text: "Drinking too much can weaken your immune system, making your body a much easier target for disease.  Chronic drinkers are more liable to contract diseases like pneumonia and tuberculosis than people who do not drink too much.  Drinking a lot on a single occasion slows your body’s ability to ward off infections – even up to 24 hours after getting drunk."
+
+  utter_alcohol_effects/blackouts:
+  - text: "Alcohol-related blackouts are gaps in a person’s memory for events that occurred while they were intoxicated. These gaps happen when a person drinks enough alcohol to temporarily block the transfer of memories from short-term to long-term storage. Blackouts are different from fainting as during a blackout the person is awake but their brain is unable to register information to form memories. It usually occurs when the concentration of alcohol rises rapidly in blood. Women are more susceptible to it than men as they usually weigh less and thus have less water in their body."
+
+  utter_alcohol_effects/overdose:
+  - text: "An alcohol overdose occurs when there is so much alcohol in the bloodstream that areas of the brain controlling basic life-support functions—such as breathing, heart rate, and temperature control—begin to shut down. Symptoms of alcohol overdose include mental confusion, difficulty remaining conscious, vomiting, seizure, trouble breathing, slow heart rate, clammy skin, dulled responses such as no gag reflex (which prevents choking), and extremely low body temperature. Alcohol overdose can lead to permanent brain damage or death. Factors that affect it are age, gender, sensitivity to alcohol, speed of drinking, medications and food consumed prior to drinking. Drugs such as opiods (like heroin) increase the risk of alcohol overdose."
+     
+
+  utter_alcohol_effects/pregnancy:
+  - text: "Women that consume alcohol during pregnancy are likely to have miscarriages, stilbirth, giving birth to children with birth defects. It can even cause the infant to die in the mother's womb. Children who are born to such parents often have abnoramally low birthweight, have problems with vision, hearing, learning, paying attention. They may also be more prone to indulging in violent behavior."
+  
+  
+
+  utter_out_of_scope:
+  - text: "I'm sorry, I don't have any more information on that. I'm just a bot. I'm just here to help you with your alcohol problem."
+   
+  utter_rephrase:
+  - text: " I didn't understand that. Could you please rephrase that?"
+  - text: "I'm sorry, I didn't understand that. Could you please rephrase that?"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

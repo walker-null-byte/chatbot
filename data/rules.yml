@@ -1,0 +1,99 @@
+version: "3.1"
+
+rules:
+
+- rule: question is bot alive
+  steps:
+  - intent: is_bot_alive
+  - action: utter_i_am_alive
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: respond to funny question
+  steps:
+  - intent: funny
+  - action: utter_funny
+
+- rule: question on alcohol effects
+  steps:
+  - intent: alcohol_effects
+  - action: utter_alcohol_effects
+
+- rule: bot speaks on creation
+  steps:
+  - intent: creation
+  - action: utter_talk_about_creation
+
+- rule: bot responds to linguistic ability
+  steps:
+  - intent: languages
+  - action: utter_languages
+
+- rule: bot assures user that conversation will be secret
+  steps:
+  - intent: confidentiality
+  - action: utter_confidentiality
+
+- rule: bot answers can you fly 
+  steps:
+  - intent: canfly
+  - action: utter_canfly
+
+- rule: bot reprimands user for swearing
+  steps:
+  - intent: expletive
+  - action: utter_reprimand 
+
+- rule: bot responds to who is your boss
+  steps:
+  - intent: whoboss
+  - action: utter_whoboss
+
+- rule: bot responds to can you sleep
+  steps:
+  - intent: sleep
+  - action: utter_sleep
+# needs to be added to domain.yml
+- rule:  asks the user to rephrase whatever they said
+  steps:
+  - intent: nlu_fallback
+  - action: utter_rephrase
+
+# handles out of scope questions
+- rule: handles out of scope questions
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: why do people react differently to alcohol
+  steps:
+  - intent: alcohol_reactions
+  - action: utter_alcohol_reactions
+
+- rule: safe alcohol
+  steps:
+  - intent: safe_alcohol
+  - action: utter_safe_alcohol
+
+- rule: moderate drinking
+  steps:
+  - intent: moderate_drinking
+  - action: utter_moderate_drinking
+  
+- rule: inquires about binge drinking
+  steps:
+  - intent: binge_drinking
+  - action: utter_binge_drinking
+
+- rule: what does getting drunk mean?
+  steps:
+  - intent: drunk
+  - action: utter_drunk

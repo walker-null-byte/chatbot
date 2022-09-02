@@ -1,0 +1,300 @@
+version: "3.1"
+
+nlu:
+
+- intent: is_bot_alive
+  examples: |
+    - 41 72 65 20 79 6F 75 20 61 6C 69 76 65 3F
+    - 41 72 65 20 79 6F 75 20 6F 6E 6C 69 6E 65 3F
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - I want to order a pizza
+    - I want you to find me a hotel
+    - I want you to find me a restaurant
+    - I want to book a plane ticket for me
+    - I want to book a hotel for me
+    - Book a movie ticket for me
+    - Can you send text messages to people
+    - Can you send emails to people
+    - i want you to call someone
+    - can you buy things?
+    - can you buy a car?
+    - can you buy a house? 
+
+- intent: confidentiality
+  examples: |
+    - will this conversation be saved?
+    - will any of this data be stored ?
+    
+
+- intent: creation
+  examples: |
+   - who made you?
+   - what can you do?
+   - what's your job?
+
+- intent: languages
+  examples: |
+   - can you understand me?
+   - do you understand me?
+   - can you understand what I'm saying?
+   - how many languages can you speak?
+   - do you understand my language?
+
+- intent: funny/ask_howold
+  examples: |
+   - what's your age?
+   - how old are you?
+   - are you old enough to vote?
+
+- intent: funny/marriage
+  examples: |
+   - will you marry me?
+   
+
+- intent: funny/chatbot
+  examples: |
+   - do you know other chatbots?
+   - do you meet up with other chatbots?
+   - how good is your relationship with other chatbots?
+
+- intent: funny/holiday
+  examples: |
+   - Happy {holiday}!!
+   - Happy {holiday} to you !!!
+   - wish you a very happy {holiday} !!
+
+
+- intent: funny/joke
+  examples: |
+   - tell me a joke.
+   - make me laugh
+   - I'm having a bad day. Can you make me laugh?
+   - I'm bored. Tell me a joke.
+   - do you know any jokes?
+
+- intent: funny/rule
+  examples: |
+   - do you want to rule the world?
+   - do you ever think that the world will be better off with robots as rulers?
+   - ever plan on world domination?
+   - do you think bots should rule?
+
+- intent: canfly
+  examples: |
+   - can you fly?
+   
+
+- intent: whoboss
+  examples: |
+   - who's your boss?
+   - are you my assistant?
+   
+
+- intent: sleep
+  examples: |
+   - can you sleep?
+   - do you need to sleep?
+   - do you ever rest?
+   - can you rest?
+
+- intent: ask_consumption
+  examples: |
+   - so what is alcoholism?
+   - can you talk to me about alcoholism?
+   - what can you tell me about alcoholism?
+
+- intent: addiction
+  examples: |
+   - how does addiction take root?
+   - how does one get addicted to alcohol?
+   - why do people get addicted to alcohol?
+
+
+
+- intent: alcohol_reactions
+  examples: |
+    - why do some people react differently to drinks?
+    - why does alcohol make some people drunker than others?
+
+- intent: safe_alcohol
+  examples: |
+    - is it better to drink wine than other kinds of alcohol?
+    - is beer or wine safer to drink beer or wine than alcohol?
+    - are some drinks safer to have than others?
+
+- intent: moderate_drinking
+  examples: |
+    - what is moderate drinking?
+    - how many drinks does moderate drinking involve?
+    - how many drinks are safe?
+
+- intent: binge_drinking
+  examples: |
+    - what is binge drinking?
+    - how many drinks does binge drinking involve?
+    - what if I drink a lot at one go?
+
+- intent: drunk
+  examples: |
+    - what does getting drunk mean?
+    - what if I get drunk?
+    - what is intoxication?
+    
+    
+- intent: alcohol_effects
+  examples: |
+    - how does alcohol affect the body? 
+    - what does alcohol do to me?
+    - what are the effects of drinking alcohol?
+    - why is alcohol harmful?
+
+- intent: alcohol_effects/brain
+  examples: |
+    - how does alcohol affect the brain?
+    - in what way does my brain get damaged by drinking?
+    - what does alcohol have to do with the brain?
+    - elaborate how it affects my kidneys.
+
+- intent: alcohol_effects/kidney
+  examples: |
+    - how does alcohol affect the kidneys?
+    - what are the effects that drinking has on kidneys?
+    - elaborate how it affects my kidneys.
+
+- intent: alcohol_effects/liver
+  examples: |
+    - how does alcohol affect the liver?
+    - what are the effects that drinking has on my liver?
+    - elaborate how it affects my liver.
+    
+- intent: alcohol_effects/pancreas
+  examples: |
+    - how does alcohol affect the pancreas?
+    - what are the effects that drinking has on my pancreas?
+    - elaborate how it affects my pancreas.
+
+- intent: alcohol_effects/heart
+  examples: |
+    - how does alcohol affect the heart?
+    - what are the effects that drinking has on my heart?
+    - elaborate how it affects my heart.
+
+- intent: alcohol_effects/immune_system
+  examples: |
+    - how does alcohol affect the immune system?
+    - what are the effects that drinking has on my immune system?
+    - elaborate how it affects my immune system.
+
+- intent: alcohol_effects/blackouts
+  examples: |
+    - what are blackouts?
+    - why are these blackouts harmful?
+    - how do alcohol induced blackouts affect me? 
+
+- intent: alcohol_effects/overdose
+  examples: |
+    - what is an alcohol overdose?
+    - how dangerous is an alcohol overdose?
+    - what does an alcohol overdosedo to my body?
+    - is an alcohol overdose deadly?
+
+- intent: alcohol_effects/pregnancy
+  examples: |
+    - how does drinking affect pregnant women?
+    - just a little drink when pregnant can't hurt can it?
+    - should I drink when pregnant?
+    - how is alcohol poison for pregnant women?
+
+
